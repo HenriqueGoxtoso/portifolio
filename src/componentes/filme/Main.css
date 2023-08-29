@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(168, 146, 245);
+}
+.main-content{
+   width: 300px;
+    background-color: red;
+}
+
+.main-content>img{
+    width: 100%;
+    height: auto;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}

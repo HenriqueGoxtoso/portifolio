@@ -1,24 +1,25 @@
 import './Header.css'
 import Link from './../link/Link'
+import logo from './../img/logo.png'
 function Header(){
     return(
         <header>
             <div>
-                <img id = "logoheader" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Barbie_Logo.svg/2560px-Barbie_Logo.svg.png" alt="" />
+                <img id='logoheader' src={logo} alt="" />
             </div>
             <nav>
                 <ul>
                     <li>
-                        <Link texto='Home'/>
+                        <Link texto='Projetos'/>
                     </li>
                     <li>
-                        <Link texto='Notícia'/>
+                        <Link texto='Trabalhos'/>
                     </li>
                     <li>
-                        <Link texto='Sobre'/>
+                        <Link texto='Currículo'/>
                     </li>
                     <li>
-                        <Link texto='Contato'/>
+                        <Link texto='Menu'/>
                     </li>
                 </ul>
             </nav>
