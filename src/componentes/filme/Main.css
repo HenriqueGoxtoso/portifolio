@@ -5,12 +5,12 @@ body{
    width: 300px;
     background-color: red;
 }
-
-.main-content>img{
-    width: 100%;
+.img-main{
+    width: 100px;
     height: auto;
 }
 .text{
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
