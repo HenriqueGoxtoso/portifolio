@@ -48,7 +48,7 @@ db.cake.insertMany([
   ]
 }])
 
-//3 
+//3 f
 use("db-patissier")
 db.cake.deleteOne({"_id": ObjectId("00000001f21ecddc3ae10039")});
 //4
