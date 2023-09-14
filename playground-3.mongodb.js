@@ -58,7 +58,8 @@ db.cake.find({}, {nome: true, preco:true})
 
 
 //5
-db.dono.find({})
+use("db-patissier")
+db.cake.find({}, {nome:true, preco:true < 70})
 //6 
 db.cake.findOneAndUpdate()
 /*db.produtos.findOneAndUpdate(
