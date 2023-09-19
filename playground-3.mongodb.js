@@ -1,46 +1,72 @@
 
 
-//Crie um banco de dados chamado mypet no MONGODB :D
-use("mypet")
-//Crie uma collection chamada dono 
-db.createCollection("dono")
-// 3. Crie as colunas na `collection dono`: `_id` `nome` `idade` `animal` 
-// 1. Na coluna `animal`, adicione as informações do: `_id` `nome` `valor` `raca`
-// 2. Insira 4 itens na `collection` `dono` 
-    
-//     *(OBS: os ids devem ser em sequencia iniciando pelo 1)*
-    
-// 3. Para cada item adicionado na `collection dono`, adicione 3 itens em `animal`
-db.dono.insertMany(
-  {_id:1, nome:"Maria Eduarda", idade: 18, 
-  animal:[{_id: 1, nome: "Maggy", valor:"1000", raca:"Pincher"},
-  {_id: 2, nome: "Mago", valor:"1000", raca:"Bacê"},
-  {_id: 3, nome: "Mongo", valor:"1000", raca:"Bulldog"}]
+//1
+use("db-patissier")
+//2
+db.createCollection("cake")
+use("db-patissier")
+db.cake.insertMany([
+  {_id:ObjectId(1),
+    nome:"Selva Negra", 
+    peso: 18, 
+    preco: 34.00, 
+    ingredientes:[
+      {nome: "Chocolate", quantidade:"100g"},
+      {nome: "Morango", quantidade:"100g"},
+      {nome: "Leite Condensado", quantidade:"100g"}
+    ]
+  },
+  
+    {_id:ObjectId(2), 
+      nome:"Oceania", 
+      peso: 18, 
+      preco: 34.00, 
+  ingredientes:[
+    {nome: "Leite Ninho", quantidade:"100g"},
+    {nome: "Morango", quantidade:"100g"},
+    {nome: "Leite Condensado", quantidade:"100g"}
+  ]
 },
-{_id:2, nome:"Henrique", idade: 18, 
-animal:[{_id: 4, nome: "Lutor", valor:"1000", raca:"Vira Lata"},
-{_id: 5, nome: "Lex", valor:"1000", raca:"Vira Lata"},
-{_id: 6, nome: "Capado", valor:"1000", raca:"Vira Lata"}]
+  {_id:ObjectId(3), 
+    nome:"China", 
+    peso: 18, 
+    preco: 34.00, 
+  ingredientes:[
+  {nome: "Nesquik", quantidade:"100g"},
+  {nome: "Nuttela", quantidade:"100g"},
+  {nome: "Castanhas", quantidade:"100g"}
+]
 },
-{_id:3, nome:"Maria Eduarda", idade: 18, 
-animal:[{_id: 7, nome: "Laranja", valor:"1000", raca:"Papagaio"},
-{_id: 8, nome: "Polaco", valor:"1000", raca:"Siamês"},
-{_id: 9, nome: "Lotus", valor:"1000", raca:"Periquito"}]
-},
-{_id:4, nome:"Maria Eduarda", idade: 18, 
-animal:[{_id: 10, nome: "Molho", valor:"1000", raca:"Pincher"},
-{_id: 11, nome: "Lucifer", valor:"1000", raca:"Persa"},
-{_id: 12, nome: "Alexander", valor:"1000", raca:"Kakatua"}]
-}
-)
-//Faça uma consulta que liste o nome e animal do dono com _id 2
-db.dono.find({_id:2},{nome:true, animal:true})
-//Faça uma consulta que apague o dono com id 2
-db.dono.deleteMany({_id:2})
-//Faça uma consulta que liste todos os dono
-db.dono.find({})
-//Faça uma consulta que apague todos os dados da collection dono 
-db.dono.deleteMany({})
+  {_id:ObjectId(4), 
+    nome:"Aniversário", 
+    peso: 18, 
+    preco: 340.00, 
+  ingredientes:[
+    {nome: "Glasse", quantidade:"100g"},
+    {nome: "Chocolate", quantidade:"100g"},
+    {nome: "Muss de Maracujá", quantidade:"100g"}
+  ]
+}])
+
+//3 f
+use("db-patissier")
+db.cake.deleteOne({"_id": ObjectId("00000001f21ecddc3ae10039")});
+//4
+use("db-patissier")
+db.cake.find({}, {nome: true, preco:true})
+
+
+
+//5
+use("db-patissier")
+db.cake.find({}, {nome:true, preco:true < 70})
+//6 
+db.cake.findOneAndUpdate()
+/*db.produtos.findOneAndUpdate(
+   { _id: ObjectId('sua_id_aqui') }, // Encontre o documento pelo ID
+   { $set: { nome: 'Novo Nome', preco: 19.99 } }, // Atualize os campos 'nome' e 'preco'
+   { returnNewDocument: true } // Retorna o documento atualizado
+);*/ 
 //Faça uma consulta que exclua a collection dono
 db.dono.drop()
 //Faça uma consulta que exclua o banco de dados mypet  
