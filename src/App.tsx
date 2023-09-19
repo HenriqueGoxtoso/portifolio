@@ -1,13 +1,16 @@
 import Header from './componentes/header/Header'
 import './App.css'
-import Filme from './componentes/filme/Main'
+import Main from './componentes/main/Main'
+import Projeto from './componentes/projetos'
 import Footer from './componentes/footer/Footer'
+
 
 function App() {
   return (
     <div>
    <Header/>
-   <Filme/>
+   </>
+   <Main/>
    <Footer/>
    </div>
   )
