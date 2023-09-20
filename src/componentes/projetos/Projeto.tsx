@@ -7,9 +7,9 @@ type ProjetoProps = {
 
 function Projeto(props:ProjetoProps){
     return(
-        <div className="Projeto-content">
+        <div className="projeto-content">
             <div className="foto_projeto">
-                <img src={props.imagem} alt="" />
+                <img className="imgprojeto"src={props.imagem} alt="" />
             </div>
         
         <div className="text_projeto">
