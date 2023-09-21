@@ -14,20 +14,32 @@ export default function Main(){
         {
             id:1,
             titulo:'Pinga Tatu de Ouro',
-            descricao:'',
+            descricao:'Criação de logo para o alambique Tatu de Ouro do cachaceiro Lodimar Gavazzoni.',
             imagem:'/tatu.png'
         },
         {
             id:2,
             titulo:'GamaMotors',
-            descricao:'',
+            descricao:'Criação de site para a loja de carros GamaMotors.',
             imagem:'/gamamotors.png'
         },
         {
             id:3,
             titulo:'GempSistem',
-            descricao:'',
+            descricao:'Criação de desing para um software de Gerenciamento de estoque.',
             imagem:'/gempsistem.png'
+        },
+        {
+            id:4,
+            titulo:'Projeto Hidroponia',
+            descricao:'Projeto extra disciplinar sobre hidroponia.',
+            imagem:'/projetoHidroponia.png'
+        },
+        {
+            id:5,
+            titulo:'Prototipo de Portifólio',
+            descricao:'Design de média fidelidade do meu portifólio.',
+            imagem:'/prototipo.png'
         }
     ]
     function TrataTexto(e:React.ChangeEvent<HTMLInputElement>){
@@ -36,12 +48,15 @@ export default function Main(){
     return(
         <>
         <div className="campo_pesquisa">
-            <p>Busque</p>
+            <p>Busque:</p>
             <input type="text" 
             className='botao_pesquisa'
             placeholder='Pesquise um Projeto'
             onChange={TrataTexto}/>
-            {texto && <p>Resultados: {texto}</p>}
+            
+        </div>
+        <div>
+        {texto && <p className='resultados'>Resultados para: {texto}</p>}
         </div>
         <main className="content-main">
             {

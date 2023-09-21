@@ -17,6 +17,7 @@ function Projeto(props:ProjetoProps){
             <p className="descricao">{props.descricao}</p>
 
             </div>
+            <button className='vermais'>Ver mais...</button>
         </div>
     )
 }
