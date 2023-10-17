@@ -3,6 +3,7 @@ function Contato(){
     return(
         <div className="Adess">
             <div className="Adess2">
+                <h1 className="titulo">ESCREVA SUA MENSAGEM</h1>
             <input className="nome" type="text" placeholder="Nome"/>
             <input className="e-mail" type="text" placeholder="E-mail"/>
             <input className="campo-mensagem" type="text" placeholder="Escreva sua mensagem aqui"/>
