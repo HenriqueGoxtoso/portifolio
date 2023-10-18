@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: rgb(77, 80, 253);
+    padding: 25px;
+    border-radius: 25px;
+    
 }
 .Adess{
     padding-top: 120px;
@@ -12,16 +16,17 @@
 }
 .nome{
     padding-right: 120px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
     border-style: none;
     margin-top: 10px;
+    box-shadow: 0px 0px 13px 4px rgba(0,0,0,0.1);
 }
 
 .e-mail{
     padding-right: 120px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
     border-style: none;
@@ -29,7 +34,7 @@
 }
 .campo-mensagem{
     padding-right: 120px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding-top: 3px;
     padding-bottom: 200px;
     border-style: none;
@@ -37,7 +42,7 @@
 
 }
 .button-envio{
-    border-radius: 5px;
+    border-radius: 10px;
     border-style: none;
     margin-top: 10px;
     transition: all 1s;
@@ -52,7 +57,7 @@
 }
 .telefone{
     padding-right: 120px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
     border-style: none;

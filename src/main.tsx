@@ -9,6 +9,7 @@ import {
   RouterProvider
 } from "react-router-dom"
 import Contato from './componentes/contato/Contato'
+import Footer from './componentes/footer/Footer'
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
     <>
       <Header/>
       <Contato/>
+      <Footer/>
     </>,
   },
 
